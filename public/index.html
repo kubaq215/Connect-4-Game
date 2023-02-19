@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Connect Four</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Connect 4</h1>
+  <div id="lobby-wrapper">
+    <div id="lobby-btn-holder">
+      <button class="lobby-btn" id="create-game">
+        <p>NEW</p>
+        <p>GAME</p>
+      </button>
+      <button class="lobby-btn" id="join-game">
+        <p>JOIN</p>
+        <p>GAME</p>
+      </button>
+      <a href="https://en.wikipedia.org/wiki/Connect_Four" target="_blank">
+        <button class="lobby-btn" id="about">
+          <p>ABOUT</p>
+        </button>
+      </a>
+    </div>
+    <div class="form-container" id="create-game-container">
+      <h2>Create a game</h2>
+      <form id="create-game-form" autocomplete="off">
+        <label for="game-id">Game ID:</label>
+        <input type="text" id="create-game-id" />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="create-password" />
+        <br />
+        <span>
+          <button type="submit">Create game</button>
+          <button type="button" class="return-btn">Return</button>
+        </span>
+      </form>
+    </div>
+    <div class="form-container" id="join-game-container">
+      <h2>Join a game</h2>
+      <form id="join-game-form">
+        <label for="game-id">Game ID:</label>
+        <input type="text" id="join-game-id" />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="join-password" />
+        <br />
+        <span>
+          <button type="submit">Join game</button>
+          <button type="button" class="return-btn">Return</button>
+        </span>
+      </form>
+    </div>
+  </div>
+  <div id="game-wrapper">
+    <div id="move-info">Your turn</div>
+    <div id="game">
+      <table id="board">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="button-holder">
+      <button class="game-btn" id="new-game">NEW GAME</button>
+      <button class="game-btn" id="leave-game">LEAVE GAME</button>
+    </div>
+  </div>
+  <div id="rate-container">
+    <p id="review">Do you like this game?</p>
+    <div class="rate">
+      <input type="radio" id="star5" name="rate" value="5" />
+      <label for="star5" title="5 stars"></label>
+      <input type="radio" id="star4" name="rate" value="4" />
+      <label for="star4" title="4 stars"></label>
+      <input type="radio" id="star3" name="rate" value="3" />
+      <label for="star3" title="3 stars"></label>
+      <input type="radio" id="star2" name="rate" value="2" />
+      <label for="star2" title="2 stars"></label>
+      <input type="radio" id="star1" name="rate" value="1" />
+      <label for="star1" title="1 star"></label>
+    </div>
+  </div>
+  
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script src="game_client.js"></script>
+</body>
+
+</html>
