@@ -56,8 +56,6 @@ async function getAverageRating() {
     }
 }
 
-getAverageRating().then((avgRating) => console.log(avgRating));
-
 let games = [];
 
 io.on('connection', (socket) => {
