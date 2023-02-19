@@ -1,7 +1,0 @@
-{
-    "name": "Connect 4",
-    "description": "Simple web game",
-    "repository": "https://github.com/kubaq215/Connect-4-Game.git",
-    "image": "heroku/nodejs"
-  }
-  
